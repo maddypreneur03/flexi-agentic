@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agentic FlexiFunnels - Coming Soon</title>
-    <meta name="description" content="Agentic FlexiFunnels - AI-powered funnel builder. Build high-converting funnels with AI agents.">
+    <title>Agentic FlexiFunnels - AI-Powered Funnel Builder</title>
+    <meta name="description" content="Build high-converting sales funnels in minutes with AI agents. The future of funnel building is here.">
     
     <style>
         * {
@@ -15,131 +15,191 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #0a0a0f;
             color: white;
-            overflow: hidden;
-            position: relative;
+            overflow-x: hidden;
         }
         
-        /* Animated background particles */
-        .particles {
-            position: absolute;
+        /* Animated gradient background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            opacity: 0.15;
             z-index: 0;
+            animation: gradientShift 15s ease infinite;
         }
         
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
+        @keyframes gradientShift {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(45deg); }
+        }
+        
+        /* Grid pattern overlay */
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 1;
+        }
+        
+        /* Floating orbs */
+        .orb {
+            position: fixed;
             border-radius: 50%;
-            animation: float 20s infinite;
+            filter: blur(80px);
+            opacity: 0.3;
+            z-index: 2;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+        
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            bottom: -250px;
+            right: -250px;
+            animation-delay: 5s;
+        }
+        
+        .orb-3 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            top: 50%;
+            right: -150px;
+            animation-delay: 10s;
         }
         
         @keyframes float {
-            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
-            33% { transform: translateY(-30px) translateX(30px) rotate(120deg); }
-            66% { transform: translateY(-60px) translateX(-30px) rotate(240deg); }
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
         }
         
+        /* Content container */
         .container {
-            text-align: center;
-            max-width: 800px;
-            padding: 40px 20px;
-            z-index: 1;
             position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .logo {
-            font-size: 48px;
+            font-size: 28px;
             font-weight: 800;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-            text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
-            animation: glow 3s ease-in-out infinite;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        @keyframes glow {
-            0%, 100% { text-shadow: 0 0 20px rgba(255,255,255,0.3), 0 0 40px rgba(255,255,255,0.2); }
-            50% { text-shadow: 0 0 30px rgba(255,255,255,0.5), 0 0 60px rgba(255,255,255,0.3); }
-        }
-        
-        .logo .ai {
-            color: #ffd700;
-            font-size: 0.7em;
-            vertical-align: super;
+        .ai-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         
         h1 {
-            font-size: 64px;
+            font-size: 72px;
             font-weight: 900;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .subtitle {
             font-size: 24px;
-            font-weight: 300;
-            margin-bottom: 40px;
-            opacity: 0.95;
+            font-weight: 400;
             line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease 0.4s both;
         }
         
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
+        .highlight {
+            color: #a78bfa;
+            font-weight: 600;
         }
         
-        .feature {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px 20px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .feature:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-        
-        .feature-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        
-        .feature-desc {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        
-        .status {
-            display: inline-block;
-            padding: 12px 30px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
+        /* Status badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: rgba(16, 185, 129, 0.1);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(16, 185, 129, 0.3);
             border-radius: 50px;
             font-size: 16px;
             font-weight: 600;
-            margin-top: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            animation: pulse 2s ease-in-out infinite;
+            color: #10b981;
+            animation: fadeInUp 1s ease 0.6s both, pulse 2s ease-in-out 1s infinite;
         }
         
         @keyframes pulse {
@@ -148,12 +208,11 @@
         }
         
         .status-dot {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #00ff88;
+            width: 10px;
+            height: 10px;
+            background: #10b981;
             border-radius: 50%;
-            margin-right: 8px;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
             animation: blink 1.5s ease-in-out infinite;
         }
         
@@ -162,96 +221,348 @@
             50% { opacity: 0.3; }
         }
         
-        .footer {
-            margin-top: 60px;
-            font-size: 14px;
-            opacity: 0.8;
+        /* Features grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 80px 0 60px;
+            animation: fadeInUp 1s ease 0.8s both;
         }
         
-        .footer a {
-            color: white;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            transition: all 0.2s;
+        .feature-card {
+            position: relative;
+            padding: 40px 32px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+            overflow: hidden;
         }
         
-        .footer a:hover {
-            border-bottom-color: white;
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+        
+        .feature-card:hover::before {
             opacity: 1;
         }
         
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-desc {
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* CTA section */
+        .cta-section {
+            text-align: center;
+            max-width: 600px;
+            animation: fadeInUp 1s ease 1s both;
+        }
+        
+        .cta-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .cta-text {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .email-form {
+            display: flex;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto 24px;
+        }
+        
+        .email-input {
+            flex: 1;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        .email-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .email-input:focus {
+            border-color: rgba(102, 126, 234, 0.5);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+        
+        .notify-btn {
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .notify-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .notify-btn:active {
+            transform: translateY(0);
+        }
+        
+        .social-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .social-proof-avatars {
+            display: flex;
+            margin-left: -8px;
+        }
+        
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid #0a0a0f;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin-left: -8px;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .footer a {
+            color: #a78bfa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer a:hover {
+            color: #c4b5fd;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 42px; }
-            .subtitle { font-size: 18px; }
-            .logo { font-size: 36px; }
-            .features { grid-template-columns: 1fr; }
+            .container {
+                padding: 60px 20px;
+            }
+            
+            h1 {
+                font-size: 42px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .email-form {
+                flex-direction: column;
+            }
+            
+            .notify-btn {
+                width: 100%;
+            }
+        }
+        
+        /* Success message */
+        .success-message {
+            display: none;
+            padding: 16px 24px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            color: #10b981;
+            font-size: 14px;
+            margin-top: 16px;
+        }
+        
+        .success-message.show {
+            display: block;
+            animation: fadeInUp 0.5s ease;
         }
     </style>
 </head>
 <body>
-    <div class="particles" id="particles"></div>
+    <!-- Background elements -->
+    <div class="bg-gradient"></div>
+    <div class="grid-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
     
     <div class="container">
-        <div class="logo">
-            FlexiFunnels<span class="ai">AI</span>
-        </div>
-        
-        <h1>Agentic FlexiFunnels</h1>
-        
-        <div class="subtitle">
-            AI-Powered Funnel Builder<br>
-            Build High-Converting Funnels in Minutes, Not Hours
+        <div class="header">
+            <div class="logo-container">
+                <span class="logo">FlexiFunnels</span>
+                <span class="ai-badge">AI Powered</span>
+            </div>
+            
+            <h1>Agentic FlexiFunnels</h1>
+            
+            <div class="subtitle">
+                Build <span class="highlight">high-converting sales funnels</span> in minutes,<br>
+                not hours. Powered by intelligent AI agents.
+            </div>
+            
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                In Development • Coming Q2 2026
+            </div>
         </div>
         
         <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🤖</div>
-                <div class="feature-title">AI Agents</div>
-                <div class="feature-desc">Smart agents that understand your business</div>
+            <div class="feature-card">
+                <span class="feature-icon">🤖</span>
+                <h3 class="feature-title">AI Agent Workforce</h3>
+                <p class="feature-desc">
+                    Deploy specialized AI agents that understand your business goals, write copy, and optimize conversions automatically.
+                </p>
             </div>
             
-            <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <div class="feature-title">Instant Builds</div>
-                <div class="feature-desc">Generate complete funnels in seconds</div>
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">Instant Generation</h3>
+                <p class="feature-desc">
+                    Generate complete, high-converting funnels in seconds. From landing pages to checkout flows—all production-ready.
+                </p>
             </div>
             
-            <div class="feature">
-                <div class="feature-icon">🎯</div>
-                <div class="feature-title">Conversion Focus</div>
-                <div class="feature-desc">Optimized for maximum conversions</div>
+            <div class="feature-card">
+                <span class="feature-icon">🎯</span>
+                <h3 class="feature-title">Smart Optimization</h3>
+                <p class="feature-desc">
+                    AI continuously tests and optimizes headlines, copy, and layouts based on real conversion data from your campaigns.
+                </p>
             </div>
         </div>
         
-        <div class="status">
-            <span class="status-dot"></span>
-            In Development - Coming Soon
+        <div class="cta-section">
+            <h2 class="cta-title">Be First in Line</h2>
+            <p class="cta-text">
+                Join 1,500+ marketers waiting for early access. Get notified when we launch and receive exclusive beta pricing.
+            </p>
+            
+            <form class="email-form" id="notifyForm">
+                <input 
+                    type="email" 
+                    class="email-input" 
+                    placeholder="Enter your email" 
+                    required
+                    id="emailInput"
+                >
+                <button type="submit" class="notify-btn">
+                    Notify Me
+                </button>
+            </form>
+            
+            <div class="success-message" id="successMessage">
+                ✓ You're on the list! We'll notify you when we launch.
+            </div>
+            
+            <div class="social-proof">
+                <div class="social-proof-avatars">
+                    <div class="avatar"></div>
+                    <div class="avatar"></div>
+                    <div class="avatar"></div>
+                </div>
+                <span>1,500+ marketers waiting</span>
+            </div>
         </div>
         
         <div class="footer">
-            Powered by <a href="https://flexifunnels.com" target="_blank">FlexiFunnels</a>
+            Powered by <a href="https://flexifunnels.com" target="_blank">FlexiFunnels</a> 
+            • Built for <a href="https://flexifunnels.com" target="_blank">17,500+ customers</a>
         </div>
     </div>
     
     <script>
-        // Generate animated particles
-        const particlesContainer = document.getElementById('particles');
-        const particleCount = 50;
-        
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
+        // Email form handling
+        document.getElementById('notifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            const size = Math.random() * 60 + 20;
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 20 + 's';
-            particle.style.animationDuration = (Math.random() * 20 + 10) + 's';
+            const email = document.getElementById('emailInput').value;
+            const successMsg = document.getElementById('successMessage');
             
-            particlesContainer.appendChild(particle);
-        }
+            // In production, you'd send this to your backend
+            console.log('Email submitted:', email);
+            
+            // Show success message
+            successMsg.classList.add('show');
+            
+            // Clear input
+            document.getElementById('emailInput').value = '';
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 5000);
+        });
     </script>
 </body>
 </html>
