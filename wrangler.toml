@@ -1,0 +1,7 @@
+name = "yoga-payment-api"
+main = "pregnancy-yoga/cloudflare-worker.js"
+compatibility_date = "2024-01-01"
+
+# Cashfree Configuration (move to secrets in production)
+[vars]
+ENVIRONMENT = "PRODUCTION"
