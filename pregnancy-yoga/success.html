@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - Dr. Monica's Pregnancy Yoga</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #f8f5f1 0%, #fefdfb 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .success-container {
+            max-width: 600px;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            margin-bottom: 24px;
+            animation: scaleIn 0.5s ease;
+        }
+        
+        @keyframes scaleIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #3d5a6c;
+            margin-bottom: 16px;
+        }
+        
+        .order-id {
+            font-size: 14px;
+            color: #6b6b6b;
+            margin-bottom: 32px;
+        }
+        
+        .success-message {
+            font-size: 18px;
+            color: #2d2d2d;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        
+        .next-steps {
+            background: #f8f5f1;
+            padding: 32px;
+            border-radius: 16px;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        
+        .next-steps h3 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #3d5a6c;
+            margin-bottom: 20px;
+        }
+        
+        .next-steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .step {
+            display: flex;
+            gap: 16px;
+            align-items: start;
+        }
+        
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: #e89b8d;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .step-text {
+            flex: 1;
+            font-size: 16px;
+            color: #2d2d2d;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 18px 48px;
+            background: #e89b8d;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(232, 155, 141, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #d47e6e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(232, 155, 141, 0.4);
+        }
+        
+        .contact-info {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid #e8e4df;
+            font-size: 14px;
+            color: #6b6b6b;
+        }
+        
+        .contact-info a {
+            color: #e89b8d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">✅</div>
+        
+        <h1>Payment Successful!</h1>
+        
+        <p class="order-id" id="orderInfo">Order ID: Loading...</p>
+        
+        <p class="success-message">
+            Thank you for joining Dr. Monica's Pregnancy Yoga Center! Your 7-day trial has been activated.
+        </p>
+        
+        <div class="next-steps">
+            <h3>What Happens Next?</h3>
+            
+            <div class="next-steps-list">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">
+                        <strong>Confirmation Email:</strong> Check your inbox for your trial details and class schedule.
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">
+                        <strong>WhatsApp Message:</strong> You'll receive Dr. Monica's location details and batch timings on WhatsApp within 10 minutes.
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">
+                        <strong>First Class:</strong> Join your preferred batch (Morning 7:00 AM or Evening 5:30 PM) starting tomorrow!
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-text">
+                        <strong>Questions?</strong> Call/WhatsApp Dr. Monica at <a href="tel:+919876543210">+91 98765 43210</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="../index.html" class="cta-button">Return to Homepage</a>
+        
+        <div class="contact-info">
+            <p>
+                Need help? Contact us at<br>
+                <a href="mailto:info@drmonica.yoga">info@drmonica.yoga</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Get order ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('order_id');
+        
+        if (orderId) {
+            document.getElementById('orderInfo').textContent = `Order ID: ${orderId}`;
+        } else {
+            document.getElementById('orderInfo').textContent = 'Thank you for your payment!';
+        }
+    </script>
+</body>
+</html>

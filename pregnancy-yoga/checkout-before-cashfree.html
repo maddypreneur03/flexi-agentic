@@ -793,24 +793,8 @@
         
         startCountdown();
         
-        // Load Cashfree SDK
-        const loadCashfreeSDK = () => {
-            return new Promise((resolve, reject) => {
-                if (window.Cashfree) {
-                    resolve(window.Cashfree);
-                    return;
-                }
-                
-                const script = document.createElement('script');
-                script.src = 'https://sdk.cashfree.com/js/v3/cashfree.js';
-                script.onload = () => resolve(window.Cashfree);
-                script.onerror = reject;
-                document.head.appendChild(script);
-            });
-        };
-        
-        // Form submission with Cashfree
-        document.getElementById('checkoutForm').addEventListener('submit', async function(e) {
+        // Form submission
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form data
@@ -823,92 +807,33 @@
                 paymentMethod: document.querySelector('.payment-method.active').dataset.method
             };
             
-            // Validate
-            if (!formData.fullName || !formData.email || !formData.phone || !formData.trimester || !formData.batch) {
-                alert('Please fill all required fields');
-                return;
-            }
+            console.log('Form submitted:', formData);
             
-            // Disable submit button
-            const submitBtn = document.querySelector('.submit-button');
-            const originalText = submitBtn.textContent;
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Processing...';
+            // Here you would integrate with Razorpay or your payment gateway
+            alert('Payment integration would happen here. Form data logged to console.');
             
-            try {
-                // Load Cashfree SDK
-                const Cashfree = await loadCashfreeSDK();
-                
-                // Initialize Cashfree
-                const cashfree = await Cashfree({
-                    mode: 'PROD' // Change to 'SANDBOX' for testing
-                });
-                
-                // Create order on backend
-                const orderData = {
-                    order_amount: 1.00,
-                    order_currency: 'INR',
-                    customer_details: {
-                        customer_id: 'YOGA_' + Date.now(),
-                        customer_name: formData.fullName,
-                        customer_email: formData.email,
-                        customer_phone: formData.phone
-                    },
-                    order_meta: {
-                        return_url: window.location.origin + '/pregnancy-yoga/success.html?order_id={order_id}',
-                        payment_methods: formData.paymentMethod === 'upi' ? 'upi' : ''
-                    },
-                    order_note: 'Dr. Monica Yoga - 7 Day Trial (₹1)',
-                    order_tags: {
-                        trimester: formData.trimester,
-                        batch: formData.batch,
-                        source: 'website'
-                    }
-                };
-                
-                // Call backend to create order
-                // REPLACE THIS URL WITH YOUR ACTUAL BACKEND ENDPOINT
-                const backendUrl = '/api/create-order'; // UPDATE THIS!
-                
-                const response = await fetch(backendUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(orderData)
-                });
-                
-                if (!response.ok) {
-                    throw new Error('Failed to create order');
+            // Example Razorpay integration (uncomment and configure):
+            /*
+            const options = {
+                key: 'YOUR_RAZORPAY_KEY',
+                amount: 100, // ₹1 in paise
+                currency: 'INR',
+                name: 'Dr. Monica Yoga Center',
+                description: '7-Day Pregnancy Yoga Trial',
+                handler: function(response) {
+                    alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
+                    // Send data to your backend
+                },
+                prefill: {
+                    name: formData.fullName,
+                    email: formData.email,
+                    contact: formData.phone
                 }
-                
-                const { session_id, order_id } = await response.json();
-                
-                // Initiate payment
-                const checkoutOptions = {
-                    paymentSessionId: session_id,
-                    returnUrl: orderData.order_meta.return_url.replace('{order_id}', order_id)
-                };
-                
-                cashfree.checkout(checkoutOptions).then((result) => {
-                    if (result.error) {
-                        console.error('Payment failed:', result.error);
-                        alert('Payment failed: ' + result.error.message);
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = originalText;
-                    }
-                    if (result.paymentDetails) {
-                        console.log('Payment successful:', result.paymentDetails);
-                        // Cashfree will handle redirect to return URL
-                    }
-                });
-                
-            } catch (error) {
-                console.error('Payment error:', error);
-                alert('Payment initialization failed. Please try again. Error: ' + error.message);
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-            }
+            };
+            
+            const rzp = new Razorpay(options);
+            rzp.open();
+            */
         });
     </script>
 </body>
