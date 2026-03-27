@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of Shaving | Bombay Shaving Company</title>
+    <meta name="description" content="Something extraordinary is coming. Join the waitlist for the most comfortable shave of your life.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f9f9f9;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(194, 147, 84, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(194, 147, 84, 0.1) 0%, transparent 50%);
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            width: 180px;
+            height: 60px;
+            margin: 0 auto 40px;
+            background: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: -0.5px;
+            color: #1a1a1a;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .coming-soon-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(194, 147, 84, 0.15);
+            border: 1px solid rgba(194, 147, 84, 0.3);
+            border-radius: 50px;
+            color: #C29354;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            animation: fadeInDown 0.8s ease;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 72px);
+            font-weight: 800;
+            line-height: 1.1;
+            color: #ffffff;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, #C29354 0%, #D4AF69 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero .subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 50px;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        .waitlist-form {
+            max-width: 500px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        
+        .form-group {
+            position: relative;
+            margin-bottom: 16px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 18px 24px;
+            font-size: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #C29354;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 4px rgba(194, 147, 84, 0.1);
+        }
+        
+        .cta-button {
+            width: 100%;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #C29354 0%, #D4AF69 100%);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(194, 147, 84, 0.4);
+        }
+        
+        .cta-button:active {
+            transform: translateY(0);
+        }
+        
+        .social-proof {
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .social-proof .count {
+            font-weight: 700;
+            color: #C29354;
+            font-size: 18px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 120px 20px;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-label {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(194, 147, 84, 0.1);
+            color: #C29354;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .section-header p {
+            font-size: 20px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            padding: 40px;
+            background: #f9f9f9;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: #C29354;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #C29354 0%, #D4AF69 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 32px;
+        }
+        
+        .feature-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            padding: 120px 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+        }
+        
+        .problem-section .section-header h2,
+        .problem-section .section-header p {
+            color: #ffffff;
+        }
+        
+        .problem-section .section-header p {
+            opacity: 0.85;
+        }
+        
+        .problem-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .problem-item {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #C29354;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .problem-item h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #C29354;
+        }
+        
+        .problem-item p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 20px;
+            background: #ffffff;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-section .waitlist-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 60px 20px;
+            background: #1a1a1a;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #C29354;
+        }
+        
+        .footer p {
+            font-size: 14px;
+        }
+        
+        /* Success Message */
+        .success-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transform: translateX(400px);
+            transition: transform 0.5s ease;
+            z-index: 1000;
+        }
+        
+        .success-message.show {
+            transform: translateX(0);
+        }
+        
+        .success-message h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .success-message p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Countdown */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .countdown-item {
+            text-align: center;
+        }
+        
+        .countdown-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #C29354;
+            display: block;
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .countdown {
+                gap: 15px;
+            }
+            
+            .countdown-number {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo">BOMBAY SHAVING CO.</div>
+            
+            <div class="coming-soon-badge">Launching Soon</div>
+            
+            <h1>
+                The Most <span>Comfortable Shave</span> of Your Life
+            </h1>
+            
+            <p class="subtitle">
+                We've spent 2 years perfecting something revolutionary. A shaving experience so comfortable, you'll actually look forward to it.
+            </p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            
+            <form class="waitlist-form" id="waitlistForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Your Name" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Your Email" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <input 
+                        type="tel" 
+                        name="phone" 
+                        placeholder="Your Phone (Optional)"
+                    >
+                </div>
+                
+                <button type="submit" class="cta-button">
+                    Join the Waitlist
+                </button>
+            </form>
+            
+            <div class="social-proof">
+                <span class="count" id="waitlistCount">2,847</span>
+                <span>people are already on the waitlist</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What Makes It Different</div>
+                <h2>Engineered for Comfort</h2>
+                <p>Every detail designed to give you the smoothest, most irritation-free shave</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🪒</div>
+                    <h3>Zero Irritation</h3>
+                    <p>Our proprietary blade technology glides effortlessly, eliminating razor burn and bumps.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💧</div>
+                    <h3>Hydration Lock</h3>
+                    <p>Infused formula keeps your skin moisturized long after shaving, not just during.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Precision Engineering</h3>
+                    <p>Crafted with aerospace-grade materials for durability and performance that lasts.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Natural Ingredients</h3>
+                    <p>Plant-based formulas that care for your skin and the planet.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Perfect for Sensitive Skin</h3>
+                    <p>Dermatologically tested for even the most sensitive skin types.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Luxury Feel</h3>
+                    <p>Turn your daily routine into a premium grooming ritual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Problem We Solved</div>
+                <h2>Shaving Shouldn't Be Painful</h2>
+                <p>We listened to thousands of men. Here's what they told us.</p>
+            </div>
+            
+            <div class="problem-list">
+                <div class="problem-item">
+                    <h4>😣 Razor Burn & Irritation</h4>
+                    <p>Red, inflamed skin after every shave. It shouldn't hurt to look good.</p>
+                </div>
+                
+                <div class="problem-item">
+                    <h4>💸 Expensive Replacement Blades</h4>
+                    <p>Premium shaving shouldn't cost a fortune every month.</p>
+                </div>
+                
+                <div class="problem-item">
+                    <h4>🚫 Products Full of Chemicals</h4>
+                    <p>Your skin deserves better than harsh, synthetic ingredients.</p>
+                </div>
+                
+                <div class="problem-item">
+                    <h4>⏰ Time-Consuming Process</h4>
+                    <p>Multiple passes, multiple products. Shaving shouldn't take forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Be Among the First</h2>
+            <p>Join the waitlist now and get exclusive early access + a special launch discount.</p>
+            
+            <form class="waitlist-form" id="waitlistFormBottom">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Your Name" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Your Email" 
+                        required
+                    >
+                </div>
+                
+                <button type="submit" class="cta-button">
+                    Join the Waitlist
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">BOMBAY SHAVING CO.</div>
+            
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#privacy">Privacy</a>
+                <a href="#terms">Terms</a>
+            </div>
+            
+            <p>&copy; 2026 Bombay Shaving Company. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <h4>🎉 You're on the list!</h4>
+        <p>We'll notify you when we launch.</p>
+    </div>
+    
+    <script>
+        // Countdown Timer (Launch in 14 days)
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 14);
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = '<h3 style="color: #C29354;">Launching Now!</h3>';
+            }
+        }
+        
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Waitlist Counter Animation
+        function animateCounter() {
+            const counter = document.getElementById('waitlistCount');
+            const target = 2847;
+            const increment = Math.ceil(target / 100);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = current.toLocaleString();
+            }, 20);
+        }
+        
+        // Start counter animation when visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.disconnect();
+                }
+            });
+        });
+        
+        observer.observe(document.querySelector('.social-proof'));
+        
+        // Form Submission Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone') || '',
+                timestamp: new Date().toISOString()
+            };
+            
+            // Here you would send to your backend
+            console.log('Waitlist signup:', data);
+            
+            // Show success message
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.add('show');
+            
+            // Reset form
+            e.target.reset();
+            
+            // Increment counter
+            const counter = document.getElementById('waitlistCount');
+            const current = parseInt(counter.textContent.replace(',', ''));
+            counter.textContent = (current + 1).toLocaleString();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 5000);
+        }
+        
+        // Attach handlers to both forms
+        document.getElementById('waitlistForm').addEventListener('submit', handleFormSubmit);
+        document.getElementById('waitlistFormBottom').addEventListener('submit', handleFormSubmit);
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
