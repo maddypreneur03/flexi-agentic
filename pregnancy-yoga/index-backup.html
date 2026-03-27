@@ -739,153 +739,6 @@
             }
         }
     </style>
-        
-        /* Special Offer Banner */
-        .special-offer {
-            background: linear-gradient(135deg, #e89b8d 0%, #d47e6e 100%);
-            padding: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .special-offer::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        
-        .offer-banner {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .offer-badge-ribbon {
-            display: inline-block;
-            padding: 10px 28px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 24px;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        .offer-content {
-            background: white;
-            padding: 48px;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-        
-        .offer-title {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--color-navy);
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-        
-        .offer-subtitle {
-            font-size: 20px;
-            color: var(--color-text-muted);
-            margin-bottom: 32px;
-            line-height: 1.6;
-        }
-        
-        .offer-features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        
-        .offer-feature {
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--color-text);
-            text-align: left;
-        }
-        
-        .offer-cta-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-        }
-        
-        .offer-cta-button {
-            display: inline-block;
-            padding: 20px 56px;
-            background: var(--color-primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 22px;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 30px rgba(232, 155, 141, 0.4);
-        }
-        
-        .offer-cta-button:hover {
-            background: var(--color-primary-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 40px rgba(232, 155, 141, 0.5);
-        }
-        
-        .offer-value-text {
-            font-size: 18px;
-            color: var(--color-text-muted);
-            font-weight: 600;
-        }
-        
-        .offer-value-text .strike {
-            text-decoration: line-through;
-            opacity: 0.6;
-        }
-        
-        .offer-value-text .highlight-price {
-            color: var(--color-primary);
-            font-size: 28px;
-            font-weight: 800;
-            font-family: 'Quicksand', sans-serif;
-        }
-        
-        @media (max-width: 768px) {
-            .special-offer {
-                padding: 40px 0;
-            }
-            
-            .offer-content {
-                padding: 32px 24px;
-            }
-            
-            .offer-title {
-                font-size: 32px;
-            }
-            
-            .offer-features {
-                grid-template-columns: 1fr;
-            }
-            
-            .offer-cta-button {
-                width: 100%;
-                text-align: center;
-            }
-        }
 </head>
 <body>
     <!-- Header -->
@@ -894,7 +747,7 @@
             <div class="logo">
                 Dr. <span class="logo-accent">Monica</span> Yoga
             </div>
-            <a href="checkout.html" class="header-cta">Book a Class</a>
+            <a href="#book" class="header-cta">Book a Class</a>
         </div>
     </header>
     
@@ -908,7 +761,7 @@
                     <p class="hero-subtitle">
                         Experience the most nurturing pregnancy journey with expert prenatal yoga designed for you and your baby's wellbeing.
                     </p>
-                    <a href="checkout.html" class="cta-button">Book Your First Class</a>
+                    <a href="#book" class="cta-button">Book Your First Class</a>
                     
                     <div class="trust-badges">
                         <div class="trust-badge">
@@ -929,31 +782,6 @@
                 </div>
                 <div class="hero-image">
                     <img src="https://placehold.co/600x700/f8f5f1/9eb89f?text=Dr.+Monica+Teaching+Yoga&font=raleway" alt="Dr. Monica teaching pregnancy yoga in Jaipur">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Special Offer Banner -->
-    <section class="special-offer">
-        <div class="container">
-            <div class="offer-banner">
-                <div class="offer-badge-ribbon">🎁 Limited Time Offer</div>
-                <div class="offer-content">
-                    <h2 class="offer-title">Try Dr. Monica's Pregnancy Yoga for Just ₹1</h2>
-                    <p class="offer-subtitle">
-                        Get 7 full days of expert-guided prenatal yoga classes. Experience the difference before you commit.
-                    </p>
-                    <div class="offer-features">
-                        <div class="offer-feature">✓ 7 Days Unlimited Access</div>
-                        <div class="offer-feature">✓ Personal Guidance from Dr. Monica</div>
-                        <div class="offer-feature">✓ Morning & Evening Batches</div>
-                        <div class="offer-feature">✓ Cancel Anytime</div>
-                    </div>
-                    <div class="offer-cta-container">
-                        <a href="checkout.html" class="offer-cta-button">Claim Your ₹1 Trial Now</a>
-                        <p class="offer-value-text">Regular Price: <span class="strike">₹2,100</span> • Today: <span class="highlight-price">₹1</span></p>
-                    </div>
                 </div>
             </div>
         </div>
