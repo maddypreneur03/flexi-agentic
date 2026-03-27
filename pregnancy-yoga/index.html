@@ -666,79 +666,6 @@
             font-size: 16px;
         }
         
-        /* Mobile Responsive */
-        @media (max-width: 968px) {
-            .hero-content,
-            .about-content,
-            .location-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .benefits-grid,
-            .classes-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .pain-points {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h1 {
-                font-size: 42px;
-            }
-            
-            .section-title {
-                font-size: 36px;
-            }
-            
-            .final-cta h2 {
-                font-size: 38px;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-cta {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-            
-            .hero {
-                padding: 80px 0 60px;
-            }
-            
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero-subtitle {
-                font-size: 18px;
-            }
-            
-            .trust-badges {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-button,
-            .cta-button-white {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
         
         /* Special Offer Banner */
         .special-offer {
@@ -859,6 +786,31 @@
         
         .offer-value-text .highlight-price {
             color: var(--color-primary);
+    
+    <!-- Special Offer Banner -->
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-banner">
+                <div class="offer-badge-ribbon">🎁 Limited Time Offer</div>
+                <div class="offer-content">
+                    <h2 class="offer-title">Try Dr. Monica's Pregnancy Yoga for Just ₹1</h2>
+                    <p class="offer-subtitle">
+                        Get 7 full days of expert-guided prenatal yoga classes. Experience the difference before you commit.
+                    </p>
+                    <div class="offer-features">
+                        <div class="offer-feature">✓ 7 Days Unlimited Access</div>
+                        <div class="offer-feature">✓ Personal Guidance from Dr. Monica</div>
+                        <div class="offer-feature">✓ Morning & Evening Batches</div>
+                        <div class="offer-feature">✓ Cancel Anytime</div>
+                    </div>
+                    <div class="offer-cta-container">
+                        <a href="checkout.html" class="offer-cta-button">Claim Your ₹1 Trial Now</a>
+                        <p class="offer-value-text">Regular Price: <span class="strike">₹2,100</span> • Today: <span class="highlight-price">₹1</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
             font-size: 28px;
             font-weight: 800;
             font-family: 'Quicksand', sans-serif;
@@ -886,6 +838,79 @@
                 text-align: center;
             }
         }
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .hero-content,
+            .about-content,
+            .location-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .benefits-grid,
+            .classes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .pain-points {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .final-cta h2 {
+                font-size: 38px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-cta {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .hero {
+                padding: 80px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-button,
+            .cta-button-white {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -929,31 +954,6 @@
                 </div>
                 <div class="hero-image">
                     <img src="https://placehold.co/600x700/f8f5f1/9eb89f?text=Dr.+Monica+Teaching+Yoga&font=raleway" alt="Dr. Monica teaching pregnancy yoga in Jaipur">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Special Offer Banner -->
-    <section class="special-offer">
-        <div class="container">
-            <div class="offer-banner">
-                <div class="offer-badge-ribbon">🎁 Limited Time Offer</div>
-                <div class="offer-content">
-                    <h2 class="offer-title">Try Dr. Monica's Pregnancy Yoga for Just ₹1</h2>
-                    <p class="offer-subtitle">
-                        Get 7 full days of expert-guided prenatal yoga classes. Experience the difference before you commit.
-                    </p>
-                    <div class="offer-features">
-                        <div class="offer-feature">✓ 7 Days Unlimited Access</div>
-                        <div class="offer-feature">✓ Personal Guidance from Dr. Monica</div>
-                        <div class="offer-feature">✓ Morning & Evening Batches</div>
-                        <div class="offer-feature">✓ Cancel Anytime</div>
-                    </div>
-                    <div class="offer-cta-container">
-                        <a href="checkout.html" class="offer-cta-button">Claim Your ₹1 Trial Now</a>
-                        <p class="offer-value-text">Regular Price: <span class="strike">₹2,100</span> • Today: <span class="highlight-price">₹1</span></p>
-                    </div>
                 </div>
             </div>
         </div>
