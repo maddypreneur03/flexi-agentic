@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Monica's Pregnancy Yoga Center | Safe, Expert-Guided Prenatal Yoga in Jaipur</title>
+    <meta name="description" content="Jaipur's trusted pregnancy yoga center led by Dr. Monica. Safe, doctor-guided prenatal yoga for a healthy pregnancy, easier delivery, and peaceful motherhood journey.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-bg: #fefdfb;
+            --color-bg-alt: #f8f5f1;
+            --color-text: #2d2d2d;
+            --color-text-muted: #6b6b6b;
+            --color-primary: #e89b8d;
+            --color-primary-hover: #d47e6e;
+            --color-accent: #9eb89f;
+            --color-accent-light: #c4d6c5;
+            --color-border: #e8e4df;
+            --color-card-bg: #ffffff;
+            --color-success: #81b894;
+            --color-navy: #3d5a6c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            background: var(--color-card-bg);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            z-index: 100;
+            padding: 16px 0;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+        
+        .logo-accent {
+            color: var(--color-primary);
+        }
+        
+        .header-cta {
+            padding: 12px 28px;
+            background: var(--color-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .header-cta:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(232, 155, 141, 0.4);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #fefdfb 0%, #f8f5f1 100%);
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(158, 184, 159, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            max-width: 580px;
+        }
+        
+        .pre-headline {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+        }
+        
+        .hero h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--color-navy);
+            margin-bottom: 24px;
+        }
+        
+        .hero-subtitle {
+            font-size: 22px;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 18px 48px;
+            background: var(--color-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(232, 155, 141, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(232, 155, 141, 0.4);
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .trust-icon {
+            font-size: 32px;
+        }
+        
+        .trust-text {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            line-height: 1.4;
+        }
+        
+        .trust-number {
+            font-weight: 700;
+            color: var(--color-navy);
+            font-size: 18px;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: var(--color-card-bg);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-pre-title {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+        
+        .section-title {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color-navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+        
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pain-card {
+            background: var(--color-bg-alt);
+            padding: 28px 32px;
+            border-radius: 16px;
+            border-left: 4px solid var(--color-primary);
+        }
+        
+        .pain-card p {
+            color: var(--color-text);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        /* Benefits */
+        .benefits {
+            background: var(--color-bg-alt);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .benefit-card {
+            background: var(--color-card-bg);
+            padding: 40px 32px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--color-accent-light);
+        }
+        
+        .benefit-icon {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-title {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 12px;
+        }
+        
+        .benefit-desc {
+            font-size: 16px;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+        
+        /* About */
+        .about {
+            background: var(--color-card-bg);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .credential-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--color-primary);
+            color: white;
+            padding: 20px 28px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(232, 155, 141, 0.4);
+            text-align: center;
+        }
+        
+        .credential-badge-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        
+        .credential-badge-text {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .about-text h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .about-text p {
+            font-size: 18px;
+            color: var(--color-text-muted);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .credentials-list {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .credential-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .check-icon {
+            color: var(--color-success);
+            font-size: 24px;
+        }
+        
+        .credential-text {
+            font-size: 17px;
+            color: var(--color-text);
+            font-weight: 600;
+        }
+        
+        /* Classes */
+        .classes {
+            background: var(--color-bg-alt);
+        }
+        
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+        
+        .class-card {
+            background: var(--color-card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            border: 2px solid var(--color-border);
+            transition: all 0.3s ease;
+        }
+        
+        .class-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .class-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .class-icon {
+            font-size: 40px;
+        }
+        
+        .class-title {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+        
+        .class-desc {
+            font-size: 17px;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .class-features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .class-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            color: var(--color-text);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--color-card-bg);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .testimonial-card {
+            background: var(--color-bg-alt);
+            padding: 36px;
+            border-radius: 20px;
+            position: relative;
+        }
+        
+        .quote-icon {
+            font-size: 48px;
+            color: var(--color-accent-light);
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-size: 17px;
+            color: var(--color-text);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .testimonial-photo {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--color-accent-light);
+        }
+        
+        .testimonial-info {
+            flex: 1;
+        }
+        
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--color-navy);
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-detail {
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+        
+        /* Location */
+        .location {
+            background: var(--color-bg-alt);
+        }
+        
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .contact-icon {
+            font-size: 32px;
+            color: var(--color-primary);
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 8px;
+        }
+        
+        .contact-details p {
+            font-size: 17px;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+        
+        .contact-details a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-details a:hover {
+            color: var(--color-primary-hover);
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .final-cta h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .final-cta p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .cta-button-white {
+            display: inline-block;
+            padding: 20px 56px;
+            background: white;
+            color: var(--color-primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .urgency-text {
+            margin-top: 24px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--color-navy);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .hero-content,
+            .about-content,
+            .location-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .benefits-grid,
+            .classes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .pain-points {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .final-cta h2 {
+                font-size: 38px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-cta {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .hero {
+                padding: 80px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-button,
+            .cta-button-white {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                Dr. <span class="logo-accent">Monica</span> Yoga
+            </div>
+            <a href="#book" class="header-cta">Book a Class</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="pre-headline">Jaipur's Trusted Pregnancy Yoga Center</div>
+                    <h1>Safe, Doctor-Guided Yoga for a Healthy Pregnancy</h1>
+                    <p class="hero-subtitle">
+                        Experience the most nurturing pregnancy journey with expert prenatal yoga designed for you and your baby's wellbeing.
+                    </p>
+                    <a href="#book" class="cta-button">Book Your First Class</a>
+                    
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <div class="trust-icon">🩺</div>
+                            <div>
+                                <div class="trust-number">Doctor-Led</div>
+                                <div class="trust-text">Medical expertise<br>you can trust</div>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-icon">❤️</div>
+                            <div>
+                                <div class="trust-number">500+ Mothers</div>
+                                <div class="trust-text">Helped through<br>healthy pregnancies</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://placehold.co/600x700/f8f5f1/9eb89f?text=Dr.+Monica+Teaching+Yoga&font=raleway" alt="Dr. Monica teaching pregnancy yoga in Jaipur">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pre-title">Pregnancy Challenges</div>
+                <h2 class="section-title">You Deserve a Healthy, Peaceful Pregnancy</h2>
+                <p class="section-subtitle">
+                    But pregnancy brings real challenges that affect your comfort, health, and peace of mind.
+                </p>
+            </div>
+            
+            <div class="pain-points">
+                <div class="pain-card">
+                    <p>Struggling with back pain, hip discomfort, or swelling that makes daily activities exhausting?</p>
+                </div>
+                <div class="pain-card">
+                    <p>Worried about staying fit and healthy throughout your pregnancy without harming your baby?</p>
+                </div>
+                <div class="pain-card">
+                    <p>Anxious about labor and delivery, wondering how to prepare your body and mind?</p>
+                </div>
+                <div class="pain-card">
+                    <p>Feeling isolated or overwhelmed, wishing you had expert guidance and a supportive community?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pre-title">What You'll Experience</div>
+                <h2 class="section-title">Pregnancy Yoga Benefits for You & Baby</h2>
+                <p class="section-subtitle">
+                    Medically-designed yoga that supports every stage of your pregnancy journey.
+                </p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌸</div>
+                    <h3 class="benefit-title">Reduced Discomfort</h3>
+                    <p class="benefit-desc">
+                        Gentle stretches and poses that ease back pain, reduce swelling, and improve sleep quality.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3 class="benefit-title">Easier Delivery</h3>
+                    <p class="benefit-desc">
+                        Strengthen pelvic floor muscles and learn breathing techniques that make labor smoother.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧘‍♀️</div>
+                    <h3 class="benefit-title">Calm Mind</h3>
+                    <p class="benefit-desc">
+                        Reduce anxiety and stress through mindfulness practices designed for expecting mothers.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">👶</div>
+                    <h3 class="benefit-title">Baby's Health</h3>
+                    <p class="benefit-desc">
+                        Improve blood circulation and oxygen flow, supporting your baby's healthy development.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3 class="benefit-title">More Energy</h3>
+                    <p class="benefit-desc">
+                        Combat pregnancy fatigue and maintain fitness in a safe, supportive environment.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">👭</div>
+                    <h3 class="benefit-title">Community Support</h3>
+                    <p class="benefit-desc">
+                        Connect with other expecting mothers in Jaipur and share your journey together.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://placehold.co/500x600/f8f5f1/3d5a6c?text=Dr.+Monica&font=raleway" alt="Dr. Monica - Pregnancy Yoga Specialist">
+                    <div class="credential-badge">
+                        <div class="credential-badge-title">Certified</div>
+                        <div class="credential-badge-text">5+ Years</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>Meet Dr. Monica</h2>
+                    <p>
+                        With over 5 years of experience specializing in pregnancy yoga, Dr. Monica combines medical knowledge with ancient yoga wisdom to create the safest, most effective prenatal program in Jaipur.
+                    </p>
+                    <p>
+                        As a certified prenatal yoga instructor with a medical background, she understands exactly what your body needs during each trimester—and what poses to avoid. Her approach is gentle, personalized, and grounded in both science and compassion.
+                    </p>
+                    
+                    <div class="credentials-list">
+                        <div class="credential-item">
+                            <span class="check-icon">✓</span>
+                            <span class="credential-text">Certified Prenatal Yoga Specialist</span>
+                        </div>
+                        <div class="credential-item">
+                            <span class="check-icon">✓</span>
+                            <span class="credential-text">Medical Background in Women's Health</span>
+                        </div>
+                        <div class="credential-item">
+                            <span class="check-icon">✓</span>
+                            <span class="credential-text">500+ Successful Student Deliveries</span>
+                        </div>
+                        <div class="credential-item">
+                            <span class="check-icon">✓</span>
+                            <span class="credential-text">Personalized Trimester-Specific Programs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Classes Section -->
+    <section class="classes">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pre-title">Our Programs</div>
+                <h2 class="section-title">Choose Your Pregnancy Yoga Journey</h2>
+                <p class="section-subtitle">
+                    Tailored classes for every stage of pregnancy, from first trimester to postpartum recovery.
+                </p>
+            </div>
+            
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="class-header">
+                        <span class="class-icon">🌱</span>
+                        <h3 class="class-title">First Trimester Gentle Yoga</h3>
+                    </div>
+                    <p class="class-desc">
+                        Weeks 1-12: Gentle movements focusing on relaxation, nausea relief, and establishing a safe practice foundation.
+                    </p>
+                    <div class="class-features">
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Nausea and fatigue management</span>
+                        </div>
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Safe modifications for early pregnancy</span>
+                        </div>
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Breathing techniques for calm</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div class="class-header">
+                        <span class="class-icon">🌿</span>
+                        <h3 class="class-title">Second Trimester Active Yoga</h3>
+                    </div>
+                    <p class="class-desc">
+                        Weeks 13-26: Build strength and flexibility while your energy returns. Perfect time to establish a consistent practice.
+                    </p>
+                    <div class="class-features">
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Core and pelvic floor strengthening</span>
+                        </div>
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Balance and stability work</span>
+                        </div>
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Energy-boosting sequences</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div class="class-header">
+                        <span class="class-icon">🌸</span>
+                        <h3 class="class-title">Third Trimester Birth Prep</h3>
+                    </div>
+                    <p class="class-desc">
+                        Weeks 27-40: Focus on positions for labor, breathing for delivery, and preparing your body for birth day.
+                    </p>
+                    <div class="class-features">
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Labor positions and hip opening</span>
+                        </div>
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Breathing for labor pain management</span>
+                        </div>
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Relaxation and visualization</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div class="class-header">
+                        <span class="class-icon">💐</span>
+                        <h3 class="class-title">Postpartum Recovery</h3>
+                    </div>
+                    <p class="class-desc">
+                        After delivery: Gentle recovery yoga to rebuild core strength, heal diastasis recti, and restore your body postpartum.
+                    </p>
+                    <div class="class-features">
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Core reconnection and healing</span>
+                        </div>
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Pelvic floor rehabilitation</span>
+                        </div>
+                        <div class="class-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Baby-friendly yoga sessions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pre-title">Success Stories</div>
+                <h2 class="section-title">What Jaipur Mothers Say</h2>
+                <p class="section-subtitle">
+                    Real experiences from mothers who trusted Dr. Monica with their pregnancy journey.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        Dr. Monica's pregnancy yoga completely changed my experience. I had a normal delivery with minimal pain, and I credit her breathing techniques and labor preparation poses.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-photo"></div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Priya Sharma</div>
+                            <div class="testimonial-detail">Mother of a healthy baby girl</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        I was so anxious during my first pregnancy. Dr. Monica's classes gave me confidence, community, and practical tools. My back pain disappeared by week 20!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-photo"></div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Anjali Verma</div>
+                            <div class="testimonial-detail">Mother of twins</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        As a doctor myself, I needed an instructor with real medical knowledge. Dr. Monica exceeded my expectations. Her program is safe, scientific, and truly effective.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-photo"></div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Dr. Meera Kapoor</div>
+                            <div class="testimonial-detail">Pediatrician and mother</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Location -->
+    <section class="location" id="book">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pre-title">Visit Us</div>
+                <h2 class="section-title">Find Our Center in Jaipur</h2>
+                <p class="section-subtitle">
+                    Conveniently located in the heart of Jaipur. Book your first class today.
+                </p>
+            </div>
+            
+            <div class="location-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>
+                                Dr. Monica Yoga Center<br>
+                                C-Scheme, Jaipur, Rajasthan<br>
+                                302001
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>
+                                Call or WhatsApp:<br>
+                                <a href="tel:+919876543210">+91 98765 43210</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-details">
+                            <h3>Class Timings</h3>
+                            <p>
+                                Morning Batch: 7:00 AM - 8:30 AM<br>
+                                Evening Batch: 5:30 PM - 7:00 PM<br>
+                                Monday to Saturday
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-placeholder">
+                    🗺️ Map View
+                    <!-- Replace with actual Google Maps embed -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Start Your Healthy Pregnancy Journey Today</h2>
+                <p>
+                    Join Jaipur's most trusted pregnancy yoga center and experience the difference expert guidance makes.
+                </p>
+                <a href="tel:+919876543210" class="cta-button-white">Book Your First Class</a>
+                <p class="urgency-text">✨ First class FREE for new students • Limited spots per batch</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Dr. Monica Yoga Center, Jaipur. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
