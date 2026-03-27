@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>₹1 Trial Offer - 7 Days of Pregnancy Yoga | Dr. Monica's Center</title>
+    <meta name="description" content="Try Dr. Monica's pregnancy yoga classes for just ₹1. 7 days of expert-guided prenatal yoga in Jaipur. Limited spots available.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-bg: #fefdfb;
+            --color-bg-alt: #f8f5f1;
+            --color-text: #2d2d2d;
+            --color-text-muted: #6b6b6b;
+            --color-primary: #e89b8d;
+            --color-primary-hover: #d47e6e;
+            --color-accent: #9eb89f;
+            --color-accent-light: #c4d6c5;
+            --color-border: #e8e4df;
+            --color-card-bg: #ffffff;
+            --color-success: #81b894;
+            --color-navy: #3d5a6c;
+            --color-urgent: #d4626f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--color-card-bg);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            padding: 20px 0;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+        
+        .logo-accent {
+            color: var(--color-primary);
+        }
+        
+        .trust-strip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+        
+        .lock-icon {
+            color: var(--color-success);
+            font-size: 16px;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Checkout Layout */
+        .checkout-wrapper {
+            padding: 60px 0 100px;
+        }
+        
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1fr 480px;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        /* Left Column - Offer Details */
+        .offer-details {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .offer-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--color-urgent);
+            color: white;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .offer-title {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .offer-subtitle {
+            font-size: 22px;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .price-display {
+            background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+            padding: 32px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .price-label {
+            font-size: 16px;
+            color: var(--color-navy);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .price-container {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .price-original {
+            font-size: 28px;
+            color: var(--color-text-muted);
+            text-decoration: line-through;
+            font-weight: 600;
+        }
+        
+        .price-current {
+            font-size: 56px;
+            color: var(--color-navy);
+            font-weight: 800;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .price-currency {
+            font-size: 32px;
+        }
+        
+        .price-note {
+            font-size: 15px;
+            color: var(--color-text);
+            font-weight: 600;
+        }
+        
+        .offer-includes {
+            background: var(--color-card-bg);
+            padding: 32px;
+            border-radius: 20px;
+            border: 2px solid var(--color-border);
+            margin-bottom: 32px;
+        }
+        
+        .offer-includes-title {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 20px;
+        }
+        
+        .offer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .offer-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+        }
+        
+        .check-icon {
+            color: var(--color-success);
+            font-size: 24px;
+            flex-shrink: 0;
+            margin-top: -2px;
+        }
+        
+        .offer-item-text {
+            font-size: 17px;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+        
+        .offer-value {
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+        
+        .total-value {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 2px dashed var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .total-label {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text-muted);
+        }
+        
+        .total-amount {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--color-navy);
+        }
+        
+        .guarantee {
+            background: var(--color-bg-alt);
+            padding: 24px;
+            border-radius: 16px;
+            display: flex;
+            gap: 20px;
+            align-items: start;
+        }
+        
+        .guarantee-icon {
+            font-size: 40px;
+            flex-shrink: 0;
+        }
+        
+        .guarantee-text h4 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 8px;
+        }
+        
+        .guarantee-text p {
+            font-size: 15px;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+        
+        /* Right Column - Checkout Form */
+        .checkout-form-card {
+            background: var(--color-card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--color-border);
+            position: sticky;
+            top: 100px;
+        }
+        
+        .form-title {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 8px;
+        }
+        
+        .form-subtitle {
+            font-size: 16px;
+            color: var(--color-text-muted);
+            margin-bottom: 32px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 8px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+            border: 2px solid var(--color-border);
+            border-radius: 12px;
+            background: var(--color-bg);
+            color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 4px rgba(232, 155, 141, 0.1);
+        }
+        
+        .form-input::placeholder {
+            color: var(--color-text-muted);
+            opacity: 0.6;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .payment-method {
+            flex: 1;
+            padding: 16px;
+            border: 2px solid var(--color-border);
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: var(--color-bg);
+        }
+        
+        .payment-method:hover {
+            border-color: var(--color-primary);
+        }
+        
+        .payment-method.active {
+            border-color: var(--color-primary);
+            background: rgba(232, 155, 141, 0.05);
+        }
+        
+        .payment-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .payment-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 20px 40px;
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Nunito', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(232, 155, 141, 0.3);
+        }
+        
+        .submit-button:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(232, 155, 141, 0.4);
+        }
+        
+        .submit-button:active {
+            transform: translateY(0);
+        }
+        
+        .secure-notice {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+        
+        .secure-icon {
+            color: var(--color-success);
+            font-size: 18px;
+        }
+        
+        .terms {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--color-border);
+            font-size: 13px;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+        
+        .terms a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .terms a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Urgency Timer */
+        .urgency-timer {
+            background: var(--color-urgent);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 50px;
+            text-align: center;
+            margin-bottom: 32px;
+            font-weight: 600;
+        }
+        
+        .timer-text {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .timer-display {
+            font-size: 24px;
+            font-weight: 800;
+            font-family: 'Quicksand', sans-serif;
+            letter-spacing: 2px;
+        }
+        
+        /* Trust Elements */
+        .trust-elements {
+            display: flex;
+            justify-content: space-around;
+            padding: 24px 0;
+            border-top: 1px solid var(--color-border);
+            margin-top: 24px;
+        }
+        
+        .trust-element {
+            text-align: center;
+        }
+        
+        .trust-element-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        
+        .trust-element-text {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .checkout-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .offer-details,
+            .checkout-form-card {
+                position: static;
+            }
+            
+            .offer-title {
+                font-size: 36px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .checkout-wrapper {
+                padding: 40px 0 60px;
+            }
+            
+            .checkout-form-card {
+                padding: 28px;
+            }
+            
+            .offer-title {
+                font-size: 32px;
+            }
+            
+            .price-current {
+                font-size: 48px;
+            }
+            
+            .payment-methods {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                Dr. <span class="logo-accent">Monica</span> Yoga
+            </div>
+            <div class="trust-strip">
+                <span class="lock-icon">🔒</span>
+                <span>Secure Checkout</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Checkout Content -->
+    <div class="checkout-wrapper">
+        <div class="container">
+            <div class="checkout-grid">
+                <!-- Left Column - Offer Details -->
+                <div class="offer-details">
+                    <div class="offer-badge">⏰ Limited Time Offer</div>
+                    
+                    <h1 class="offer-title">Try 7 Days of Expert Pregnancy Yoga for Just ₹1</h1>
+                    
+                    <p class="offer-subtitle">
+                        Experience Dr. Monica's personally guided prenatal yoga classes. No risk, no commitment—just pure value.
+                    </p>
+                    
+                    <div class="urgency-timer">
+                        <div class="timer-text">Offer expires in:</div>
+                        <div class="timer-display" id="countdown">23:45:12</div>
+                    </div>
+                    
+                    <div class="price-display">
+                        <div class="price-label">Your Trial Investment:</div>
+                        <div class="price-container">
+                            <span class="price-original">₹2,100</span>
+                            <span class="price-current"><span class="price-currency">₹</span>1</span>
+                        </div>
+                        <div class="price-note">Pay just ₹1 for 7 full days of classes</div>
+                    </div>
+                    
+                    <div class="offer-includes">
+                        <h3 class="offer-includes-title">What You Get in Your 7-Day Trial:</h3>
+                        
+                        <div class="offer-list">
+                            <div class="offer-item">
+                                <span class="check-icon">✓</span>
+                                <div class="offer-item-text">
+                                    <span class="offer-value">7 Days Unlimited Access</span> to all pregnancy yoga classes (worth ₹2,100)
+                                </div>
+                            </div>
+                            
+                            <div class="offer-item">
+                                <span class="check-icon">✓</span>
+                                <div class="offer-item-text">
+                                    <span class="offer-value">Personal Guidance</span> from Dr. Monica herself—not assistants
+                                </div>
+                            </div>
+                            
+                            <div class="offer-item">
+                                <span class="check-icon">✓</span>
+                                <div class="offer-item-text">
+                                    <span class="offer-value">Trimester-Specific Programs</span> tailored to your stage of pregnancy
+                                </div>
+                            </div>
+                            
+                            <div class="offer-item">
+                                <span class="check-icon">✓</span>
+                                <div class="offer-item-text">
+                                    <span class="offer-value">Morning OR Evening Batches</span>—choose what fits your schedule
+                                </div>
+                            </div>
+                            
+                            <div class="offer-item">
+                                <span class="check-icon">✓</span>
+                                <div class="offer-item-text">
+                                    <span class="offer-value">Breathing & Labor Prep Techniques</span> you'll use on delivery day
+                                </div>
+                            </div>
+                            
+                            <div class="offer-item">
+                                <span class="check-icon">✓</span>
+                                <div class="offer-item-text">
+                                    <span class="offer-value">Access to Mother's Community</span> in Jaipur
+                                </div>
+                            </div>
+                            
+                            <div class="offer-item">
+                                <span class="check-icon">✓</span>
+                                <div class="offer-item-text">
+                                    <span class="offer-value">No Obligation</span>—cancel anytime, no questions asked
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="total-value">
+                            <span class="total-label">Total Value:</span>
+                            <span class="total-amount">₹2,100</span>
+                        </div>
+                    </div>
+                    
+                    <div class="guarantee">
+                        <div class="guarantee-icon">🛡️</div>
+                        <div class="guarantee-text">
+                            <h4>100% Satisfaction Guarantee</h4>
+                            <p>If you're not absolutely delighted after your first class, we'll refund your ₹1—no questions asked. You have nothing to lose.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Checkout Form -->
+                <div class="checkout-form-card">
+                    <h2 class="form-title">Complete Your Order</h2>
+                    <p class="form-subtitle">Secure your spot in Dr. Monica's class today</p>
+                    
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                class="form-input" 
+                                placeholder="Enter your full name" 
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="form-input" 
+                                placeholder="your@email.com" 
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">WhatsApp Number *</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                class="form-input" 
+                                placeholder="+91 98765 43210" 
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="trimester" class="form-label">Current Trimester *</label>
+                            <select id="trimester" class="form-input" required>
+                                <option value="">Select your trimester</option>
+                                <option value="first">First Trimester (Weeks 1-12)</option>
+                                <option value="second">Second Trimester (Weeks 13-26)</option>
+                                <option value="third">Third Trimester (Weeks 27-40)</option>
+                                <option value="postpartum">Postpartum</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="batch" class="form-label">Preferred Batch *</label>
+                            <select id="batch" class="form-input" required>
+                                <option value="">Choose your preferred time</option>
+                                <option value="morning">Morning Batch (7:00 AM - 8:30 AM)</option>
+                                <option value="evening">Evening Batch (5:30 PM - 7:00 PM)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Payment Method</label>
+                            <div class="payment-methods">
+                                <div class="payment-method active" data-method="upi">
+                                    <div class="payment-icon">📱</div>
+                                    <div class="payment-label">UPI</div>
+                                </div>
+                                <div class="payment-method" data-method="card">
+                                    <div class="payment-icon">💳</div>
+                                    <div class="payment-label">Card</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">
+                            Claim Your ₹1 Trial Now
+                        </button>
+                        
+                        <div class="secure-notice">
+                            <span class="secure-icon">🔒</span>
+                            <span>Secure payment powered by Razorpay</span>
+                        </div>
+                        
+                        <div class="trust-elements">
+                            <div class="trust-element">
+                                <div class="trust-element-icon">✓</div>
+                                <div class="trust-element-text">Cancel Anytime</div>
+                            </div>
+                            <div class="trust-element">
+                                <div class="trust-element-icon">🛡️</div>
+                                <div class="trust-element-text">Money-Back<br>Guarantee</div>
+                            </div>
+                            <div class="trust-element">
+                                <div class="trust-element-icon">🔐</div>
+                                <div class="trust-element-text">Secure<br>Checkout</div>
+                            </div>
+                        </div>
+                        
+                        <div class="terms">
+                            By completing this purchase, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. Your trial begins immediately upon payment confirmation. Cancel anytime within 7 days with no further charges.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Payment method selection
+        document.querySelectorAll('.payment-method').forEach(method => {
+            method.addEventListener('click', function() {
+                document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Countdown timer
+        function startCountdown() {
+            let hours = 23;
+            let minutes = 45;
+            let seconds = 12;
+            
+            setInterval(() => {
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                }
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                }
+                if (hours < 0) {
+                    hours = 23;
+                    minutes = 59;
+                    seconds = 59;
+                }
+                
+                const display = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                document.getElementById('countdown').textContent = display;
+            }, 1000);
+        }
+        
+        startCountdown();
+        
+        // Form submission
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                trimester: document.getElementById('trimester').value,
+                batch: document.getElementById('batch').value,
+                paymentMethod: document.querySelector('.payment-method.active').dataset.method
+            };
+            
+            console.log('Form submitted:', formData);
+            
+            // Here you would integrate with Razorpay or your payment gateway
+            alert('Payment integration would happen here. Form data logged to console.');
+            
+            // Example Razorpay integration (uncomment and configure):
+            /*
+            const options = {
+                key: 'YOUR_RAZORPAY_KEY',
+                amount: 100, // ₹1 in paise
+                currency: 'INR',
+                name: 'Dr. Monica Yoga Center',
+                description: '7-Day Pregnancy Yoga Trial',
+                handler: function(response) {
+                    alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
+                    // Send data to your backend
+                },
+                prefill: {
+                    name: formData.fullName,
+                    email: formData.email,
+                    contact: formData.phone
+                }
+            };
+            
+            const rzp = new Razorpay(options);
+            rzp.open();
+            */
+        });
+    </script>
+</body>
+</html>
